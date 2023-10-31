@@ -1,28 +1,36 @@
 package ru.luxkod.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import ru.luxkod.model.strategy.work.FeedingStrategy;
+import ru.luxkod.model.strategy.work.HealingStrategy;
+import ru.luxkod.model.strategy.work.WorkStrategy;
 
-@AllArgsConstructor
 @Data
 public class Worker {
     private String name;
     private Role role;
+    private WorkStrategy workStrategy;
 
-    //TODO
-    public void feedAnimal() {
-        if (role != Role.KEEPER) {
-            System.out.println("потрачено. Вас покусали и вы ушли с позором домой:с");
-            return;
-        }
-        System.out.println("супер, покормили зверюшку!");
+    public Worker(String name, Role role) {
+        this.name = name;
+        this.role = role;
+        setWorkingStrategy(role);
     }
 
-    public void healAnimal() {
-        if (role != Role.VETERINARY) {
-            System.out.println("Вы не айболит, отойдите от зверюшки!");
-            return;
+    private void setWorkingStrategy(Role role) {
+        switch (role) {
+            case KEEPER:
+                this.workStrategy = new FeedingStrategy();
+                break;
+            case VETERINARY:
+                this.workStrategy = new HealingStrategy();
+                break;
+            default:
+                System.err.println("Wrong!");
         }
-        System.out.println("супер, полечили зверюшку! Она жива и здорова!");
+    }
+
+    public void doWork(Animal animal) {
+        workStrategy.doWork(animal);
     }
 }
