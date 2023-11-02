@@ -1,9 +1,10 @@
-package ru.luxkod.model;
+package ru.luxkod.entities;
 
 import lombok.Data;
-import ru.luxkod.model.strategy.work.FeedingStrategy;
-import ru.luxkod.model.strategy.work.HealingStrategy;
-import ru.luxkod.model.strategy.work.WorkStrategy;
+import ru.luxkod.entities.enums.Role;
+import ru.luxkod.entities.strategies.work.FeedingStrategy;
+import ru.luxkod.entities.strategies.work.HealingStrategy;
+import ru.luxkod.entities.strategies.work.WorkStrategy;
 
 @Data
 public class Worker {

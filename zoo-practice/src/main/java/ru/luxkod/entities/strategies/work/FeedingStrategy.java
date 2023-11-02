@@ -1,6 +1,6 @@
-package ru.luxkod.model.strategy.work;
+package ru.luxkod.entities.strategies.work;
 
-import ru.luxkod.model.Animal;
+import ru.luxkod.entities.Animal;
 
 public class FeedingStrategy implements WorkStrategy {
     @Override

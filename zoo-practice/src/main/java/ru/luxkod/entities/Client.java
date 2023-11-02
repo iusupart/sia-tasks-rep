@@ -1,4 +1,4 @@
-package ru.luxkod.model;
+package ru.luxkod.entities;
 
 //        3. Посетители:
 //
@@ -6,6 +6,7 @@ package ru.luxkod.model;
 //        Методы: посещение зоопарка.
 
 import lombok.Data;
+import ru.luxkod.entities.enums.TicketType;
 
 import java.time.LocalDate;
 

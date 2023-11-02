@@ -1,4 +1,4 @@
-package ru.luxkod.model;
+package ru.luxkod.entities.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

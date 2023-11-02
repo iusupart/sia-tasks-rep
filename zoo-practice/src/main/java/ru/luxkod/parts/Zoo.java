@@ -1,4 +1,8 @@
-package ru.luxkod.model;
+package ru.luxkod.parts;
+
+import ru.luxkod.entities.Animal;
+import ru.luxkod.entities.Client;
+import ru.luxkod.entities.Worker;
 
 import java.util.ArrayList;
 import java.util.List;

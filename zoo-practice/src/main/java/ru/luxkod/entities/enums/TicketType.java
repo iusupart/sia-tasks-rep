@@ -1,4 +1,4 @@
-package ru.luxkod.model;
+package ru.luxkod.entities.enums;
 
 public enum TicketType {
     KIDS,
